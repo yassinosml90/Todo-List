@@ -1,0 +1,128 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #769295;
+    background: linear-gradient(0deg, #769295, #845A93);
+}
+.todo-container h1{
+    position: relative;
+    top: 0px;
+    font-size: 3rem;
+}
+.todo-container{
+    height: 400px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+.todo-list{
+    width: 370px;
+    height: 100px;
+    margin: 40px 0px;
+}
+
+.todo{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 350px;
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    animation: animate 1s;
+    
+}
+.check-statu {
+    text-decoration: line-through;
+    opacity: .50;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+}
+.animateout{
+    transform: translateX(-50%);
+    transition: .5s;
+    opacity: 0;
+}
+.todo button{
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: aqua;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    transition: .5s;
+}
+.todo .check{
+    background-color: rgb(0, 194, 0);
+    position: absolute;
+    right: 60px;
+}
+.todo .check:hover{
+    background-color: rgb(44, 255, 44);
+}
+.todo .delete{
+    background-color: rgb(255, 0, 0);
+}
+.todo .delete:hover{
+    background-color: rgb(255, 40, 40);
+}
+.todo i{
+    pointer-events: none;
+    color: white;
+}
+.todo-input input{
+    width: 250px;
+    outline: none;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.todo-input button{
+    width: 100px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: rgb(36, 138, 255);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s;
+}
+.todo-input button:hover{
+    transform: scale(105%);
+}
+.todo-list .todo li{
+    list-style-type: none;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+img{
+    width: 400px;
+}
+.todo li{
+    width: 230px;
+}
